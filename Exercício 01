@@ -1,0 +1,34 @@
+/* Ex 01 - Crie um algoritmo que leia dois números e exiba o resultado da divisão entre eles. O algoritmo deverá seguir todas as regras da divisão de números reais.
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		double numeroUm;
+		double numeroDois;
+		
+		System.out.print("Digite o primeiro número: ");
+		numeroUm = scanner.nextDouble();
+		
+		System.out.print("Digite o segundo número: ");
+		numeroDois = scanner.nextDouble();
+		
+		double resultado = numeroUm / numeroDois;
+		
+		if (numeroUm == 0 || numeroDois == 0) {
+		    
+		    System.out.println("Essa operação é inválida.");
+		}
+		
+		else {
+		    
+		    System.out.println(numeroUm + "/" + numeroDois + "=" + resultado); 
+		}
+		
+		scanner.close();
+		
+	}
+}
