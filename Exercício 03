@@ -1,0 +1,40 @@
+/* Ex 03 - Escreva um programa em Java para ler o número total de eleitores de um município, o número de votos brancos,
+nulos e válidos. Calcular e escrever o percentual que cada um representa em relação ao total de eleitores.
+*/ 
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		int brancos;
+		int nulos;
+		int validos;
+		
+		System.out.print("Informe a quantidade de votos brancos: ");
+		brancos = scanner.nextInt();
+		
+		System.out.print("Informe a quantidade de votos nulos: ");
+		nulos = scanner.nextInt();
+		
+		System.out.print("Digite a nota do terceiro bimestre: ");
+		validos = scanner.nextInt();
+		
+		int totalEleitores = brancos + nulos + validos;
+		
+		double percentualVotosBrancos = (brancos * 100) / totalEleitores; 
+		double percentualVotosNulos = (nulos * 100) / totalEleitores;
+		double percentualVotosValidos = (validos * 100) / totalEleitores;
+	
+		    
+		System.out.println("Nessa eleição " + percentualVotosValidos + "% dos votos foram válidos.");
+	    System.out.println("Nessa eleição " + percentualVotosNulos + "% dos votos foram nulos.");
+	    System.out.println("Nessa eleição " + percentualVotosBrancos + "% dos votos foram brancos.");
+		    
+		 
+		scanner.close();
+		
+	}
+}
