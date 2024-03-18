@@ -1,0 +1,63 @@
+/* Ex 05 - Escreva um programa em Java para determinar se o indivíduo está com um peso favorável. Essa situação é determinada através do IMC
+(Índice de Massa Corpórea), que é definida pela equação: IMC = pesoaltura2. A situação do peso é determinada pela tabela abaixo: 
+
+Condição
+Situação
+IMC abaixo de 20
+Abaixo do peso
+IMC de 20 a 25
+Peso Normal
+IMC de 25 a 30
+Sobrepeso
+IMC de 30 a 40
+Obeso
+IMC de 40 e acima 
+Obeso Mórbido
+*/
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		double peso;
+		double alturaCm;
+	
+		System.out.print("Informe o seu peso: ");
+		peso = scanner.nextDouble();
+		
+		System.out.print("Informe a sua altura (Em cm): ");
+		alturaCm = scanner.nextDouble();
+		
+		double alturaM = alturaCm / 100;
+		
+		double imc = peso / (alturaM * alturaM);
+		
+	    if (imc < 20) {
+		
+		    System.out.println("Situação: Abaixo do peso. Seu IMC: " + imc);    
+		}
+	
+	    if (imc >= 20 && imc < 25) {
+	        
+	         System.out.println("Situação: Peso normal. Seu IMC: " + imc);  
+	    }      
+	     
+	    if (imc >= 25 && imc < 30) {
+	        
+	        System.out.println("Situação: Sobrepeso. Seu IMC: " + imc); 
+	   
+	  } if (imc >= 30 && imc < 40) {  
+	 
+	        System.out.println("Situação: Obeso. Seu IMC: " + imc); 
+	        
+	  } if (imc > 40) {     
+	        
+	        System.out.println("Situação: Obeso Mórbido. Seu IMC: " + imc);
+	  }      
+		scanner.close();
+		
+	}
+}
