@@ -1,0 +1,40 @@
+/* Ex 06 - Escreva um programa que peça ao usuário que insira um número de 1 a 4, correspondendo a cada estação do ano 
+(1 para Primavera, 2 para Verão, 3 para Outono, e 4 para Inverno) para identificar a estação escolhida e imprimir uma mensagem característica daquela estação.
+*/ 
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Informe um número entre 1 e 4: ");
+		int numero = scanner.nextInt();
+		
+	   switch (numero) {
+	      case 1:
+	           System.out.println("Primavera: Não é uma simples estação de flores, é muito mais, é um colorido da alma.");
+	      break;
+	    
+        case 2:
+            System.out.println("Verão: Céu + sol + mar= a combinação perfeita do verão!");
+        break;
+        
+        case 3:
+            System.out.println("Outono: Repara que o outono é mais estação da alma do que da natureza.");
+        break;
+        
+        case 4:
+            System.out.println("Inverno: No inverno, o vento dança com as folhas a seu contento");
+            
+        default: 
+              System.out.println("O número escolhido é inválido.");
+              break;
+            
+	}
+
+	    scanner.close();
+	}
+
+}
